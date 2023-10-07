@@ -20,7 +20,7 @@ function App() {
   const [newUserForm, setNewUserForm] = useState(false);
   const { enqueueSnackbar } = useSnackbar();
   const [currentPage, setCurrentPage] = useState(1);
-  const [postPerPage, setPostPerPage] = useState(8);
+  const [postPerPage] = useState(8);
 
   //This function is used to fetch usersData from backend
   const fetchData = async () => {
