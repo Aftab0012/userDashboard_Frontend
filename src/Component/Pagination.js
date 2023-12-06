@@ -21,15 +21,17 @@ const Pagination = ({
   }
 
   return (
-    <div>
+    <div className="flex flex-wrap justify-center">
       {pages.map((page, index) => (
         <button
           key={index}
-          className={`bg-gray-800 text-white w-12 h-12 ml-2 text-center rounded-full ${
+          className={`bg-gray-800 text-white w-12 h-12 ml-3 m-2 text-center rounded-full ${
             page === currentPage
               ? 'bg-blue-700 text-white-800'
               : 'hover:bg-blue-500'
-          } ${page === currentPage ? `${'font-bold bg-blue-600'}` : ''}`}
+          } ${
+            page === currentPage ? `${'font-bold scale-125 bg-indigo-600'}` : ''
+          }`}
           onClick={() => setCurrentPage(page)}
         >
           {page}
